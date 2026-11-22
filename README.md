@@ -46,6 +46,16 @@ Les clés étrangères utilisent `ON DELETE RESTRICT` : une formation qui contie
 
 La connexion (`database/connexion.php`) utilise `root` sans mot de passe, la configuration par défaut de XAMPP. À modifier si besoin.
 
+## Utilisation
+
+1. Démarrer Apache et MySQL dans XAMPP. La base `tp7_crud` doit avoir été créée en important `database.sql`, et les paramètres de connexion dans `database/connexion.php` doivent correspondre à votre configuration MySQL. Voir la section [Installation](#installation) si nécessaire.
+2. Ouvrir `http://localhost/tp7-crud/`. 
+3. Depuis l'accueil ou la barre de navigation, ouvrir **Formations**, **Étudiants** ou **Modules**.
+4. Créer d'abord une formation. Les formulaires d'ajout d'étudiants et de modules nécessitent une formation existante et permettent de la choisir dans une liste.
+5. Dans chaque liste, utiliser **+ Ajouter** pour créer un élément. Utiliser **Modifier** pour changer ses informations ; le formulaire reprend les valeurs déjà enregistrées.
+6. Pour supprimer un étudiant ou un module, cliquer sur **Supprimer** et confirmer l'action. La liste s'actualise ensuite avec un message de résultat.
+7. Une formation ne peut être supprimée que si aucun étudiant ni module ne lui est rattaché. Si la suppression est refusée, supprimer ou réaffecter d'abord ces éléments, puis réessayer.
+
 ## Structure du projet
 
 ```
