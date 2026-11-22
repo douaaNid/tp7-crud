@@ -18,6 +18,10 @@ L'accueil donne accès aux trois espaces de gestion. Chaque espace permet de con
 
 ## Modèle de données
 
+![Diagramme de conception des formations, des étudiants et des modules](docs/diagramme-conception.png)
+
+*Réalisé avec StarUML, ce diagramme présente la conception générale et les liens entre les trois entités. Il ne détaille pas tous les champs de la base : les noms exacts des colonnes réellement utilisés par l'application sont indiqués dans le tableau ci-dessous.*
+
 | Table        | Clé primaire   | Autres attributs                      | Clé étrangère                        |
 |--------------|----------------|---------------------------------------|--------------------------------------|
 | `formations` | `id_formation` | `titre`, `duree_mois`, `niveau`       | –                                    |
