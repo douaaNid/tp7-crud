@@ -102,6 +102,12 @@ tp7-crud/
 
 *Le même parcours est appliqué aux modules : l'utilisateur confirme l'action, puis le serveur supprime le module visé grâce à son identifiant et redirige vers la liste. La capture montre le message de réussite et les modules qui restent enregistrés.*
 
+### Suppression d'une formation refusée
+
+![Suppression d'une formation refusée car elle contient encore des éléments liés](docs/formations-suppression-refusee.png)
+
+*Ici, la suppression d'une formation est refusée parce qu'elle possède encore des étudiants ou des modules associés. La contrainte `ON DELETE RESTRICT` de la base empêche de supprimer la formation et de laisser des enregistrements orphelins. L'application intercepte cette erreur et affiche un message explicite dans la liste ; il faut d'abord supprimer ou réaffecter les éléments liés.*
+
 ## Scénario de test (activité 12)
 
 1. Accueil : les 3 liens mènent aux 3 listes ; la barre de navigation permet de revenir à l'accueil.
